@@ -85,7 +85,7 @@ var finish = { status: "accept" };
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ status: "accept" }),
+      body: JSON.stringify(finish),
     });
 
     console.log("Received finish status " + finish_req.status);
