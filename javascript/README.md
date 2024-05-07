@@ -113,7 +113,7 @@ For local testing, select `Foundry` which gives you mock and test faucets to sub
 ? Chain (Use arrow keys)
 ❯ Foundry
 ? Chain Foundry
-? RPC URL http://127.0.0.1:8545
+? RPC URL http://localhost:8545
 ? Wallet Mnemonic
 ? Mnemonic test test test test test test test test test test test junk
 ? Account 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 9999.969170031383970357 ETH
