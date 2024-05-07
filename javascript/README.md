@@ -1,52 +1,51 @@
 # Calculator dApp | JavaScript
 
-This version is written in JavaScript and uses the [Math.js library](https://mathjs.org/) to process arithmetic expressions. 
+This version is written in JavaScript and uses the [Math.js library](https://mathjs.org/) to process arithmetic expressions.
 
 The dApp processes arithmetic expressions encoded in hex format and returns the results as a notice in a similar format.
 
 ## Requirements and Installation
 
-The Sunodo CLI heavily uses Docker under the hood, so you must have it installed and up-to-date.
+The Cartesi CLI heavily uses Docker under the hood, so you must have it installed and up-to-date.
 
 The recommended way to have all plugins ready for building is to install [Docker Desktop](https://www.docker.com/products/docker-desktop/).
 
 ### macOS
 
-If you have [Homebrew](https://brew.sh/) installed, you can install Sunodo by running this command:
+If you have [Homebrew](https://brew.sh/) installed, you can install Cartesi CLI by running this command:
 
 ```bash
-brew install sunodo/tap/sunodo
+brew install cartesi/tap/cartesi
 ```
 
-Alternatively, you can install Sunodo with Node.js by running:
+Alternatively, you can install Cartesi CLI with Node.js by running:
 
 ```bash
-npm install -g @sunodo/cli
+npm install -g @cartesi/cli
 ```
 
 ### Linux
 
-You can either use [Homebrew on Linux](https://docs.brew.sh/Homebrew-on-Linux), or install Sunodo with:
+You can either use [Homebrew on Linux](https://docs.brew.sh/Homebrew-on-Linux), or install Cartesi CLI with:
 
 ```
-npm install -g @sunodo/cli
+npm install -g @cartesi/cli
 ```
 
 ### Windows
 
-Install [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install) and the Ubuntu dsitro from Microsoft Store and install Sunodo with:
+Install [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install) and the Ubuntu dsitro from Microsoft Store and install Cartesi CLI with:
 
 ```
-npm install -g @sunodo/cli
+npm install -g @cartesi/cli
 ```
-
 
 ## Building the application
 
 To build the application, run:
 
 ```
-sunodo build
+cartesi build
 ```
 
 You should see a Cartesi Machine snapshot output similar to this:
@@ -78,10 +77,10 @@ Storing machine: please wait
 
 ## Running the application
 
-This executes a Cartesi node for the application previously built with `sunodo build`.
+This executes a Cartesi node for the application previously built with `cartesi build`.
 
 ```
-sunodo run
+cartesi run
 ```
 
 It should print this output:
@@ -99,18 +98,18 @@ It should print this output:
 
 ## Interacting with the application
 
-You can use the `sunodo send` command to send input payloads to your applications.
+You can use the `cartesi send` command to send input payloads to your applications.
 
 With your node running, open a new terminal tab. You can send a generic input to your application as follows:
 
 ```shell
- sunodo send generic
+ cartesi send generic
 ```
 
 For local testing, select `Foundry` which gives you mock and test faucets to submit transactions:
 
 ```
-> sunodo send generic
+> cartesi send generic
 ? Chain (Use arrow keys)
 ❯ Foundry
 ? Chain Foundry
@@ -120,7 +119,7 @@ For local testing, select `Foundry` which gives you mock and test faucets to sub
 ? Account 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 9999.969170031383970357 ETH
 ? DApp address 0x70ac08179605AF2D9e75782b8DEcDD3c22aA4D0C
 ? Input String encoding
-? Input (as string) 3 + 5 * 10  
+? Input (as string) 3 + 5 * 10
 ✔ Input sent: 0xd30150ee888a2bbf6b491812ee9ca28cb5754381eba3415ce4087322768c191f
 ```
 
@@ -132,5 +131,3 @@ It will evaluate the mathematical expression `3 + 5 * 10` and add the outcome `5
 43272d70-validator-1  | INFO:__main__:Received input: 3+5*10
 43272d70-validator-1  | INFO:__main__:Adding notice with payload: '53'
 ```
-
-
